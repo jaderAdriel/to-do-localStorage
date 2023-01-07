@@ -1,0 +1,106 @@
+
+@use './../assets/style/space';
+
+.form {
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    padding: 1rem;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    width: 100%;
+    &__label {
+        color: #121212;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    &__input, textarea {
+        color: #4c4c4c;
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.2rem 0.4rem;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+    textarea {
+        min-height: 4rem;
+    }
+
+    .listOption {
+        display: flex;
+        flex-wrap: wrap;
+        gap: space.$s-04;
+    }
+
+    .option {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+        &__label {
+            padding: 0 space.$s-02;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: center; 
+            gap: space.$s-02;
+            z-index: -1;
+            text-transform: capitalize;
+        }
+        &__input {
+            position: absolute;
+            display: block;
+            outline: none;
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            border-radius: 5px;
+
+            &:checked {
+                background-color: rgba(31, 31, 31, 0.12);
+            }
+            
+        }
+    }
+}
+
+.action {
+    margin-top: space.$m-01;
+    .submitBtn {
+        width: 100%;
+        background-color: var(--primary);
+        color: #fff;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+}
+
+.formControl {
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}

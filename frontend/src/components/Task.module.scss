@@ -1,0 +1,73 @@
+@use './../assets/style/space';
+
+.task {
+    position: relative;
+    margin: space.$s-04 0;
+    max-width: 30rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: space.$m-01;
+    
+    &:hover {
+        background-color: #58585806;
+    }
+    .field {
+        padding: 0 0 space.$s-02 0;
+        
+        &__title{
+            text-transform: capitalize;
+            min-width: 6.8rem;
+            font-weight: 600;
+            color: #121212;
+        }
+        &__value{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: space.$s-02;
+            color: #4c4c4c;
+        }
+    }
+    
+}
+
+.actions {
+    width: 100%;
+    padding:  space.$s-02 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: space.$s-04;
+
+    .action {
+        flex-grow: 1;
+        height: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 5rem;
+        gap: space.$s-03;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        &__name {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        &__icon {
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+
+        &-more {
+            outline: 1px inset gray;
+        }
+    }
+}
+
+.header {
+    position: absolute;
+    left: calc(100% - 2rem);
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
